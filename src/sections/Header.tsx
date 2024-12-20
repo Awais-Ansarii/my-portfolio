@@ -3,7 +3,7 @@ import React from "react";
 
 const Header = () => {
   return (
-    <div className="flex justify-center items-center relative top-3">
+    <div className="flex justify-center items-center fixed top-3 z-50 mx-auto w-full">
       <nav className="flex gap-1 p-0.5 border border-white/15 bg-white/10 rounded-full backdrop-blur">
         <Link href={"#"} className="nav-item">
           Home

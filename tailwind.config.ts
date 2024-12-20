@@ -25,6 +25,10 @@ const config: Config = {
         sans: "var(--font-inter)",
         serif: "var(--font-calistoga)",
       },
+      maskImage: {
+        gradient:
+          "linear-gradient(to bottom, transparent, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.7), transparent)",
+      },
     },
   },
   plugins: [],
