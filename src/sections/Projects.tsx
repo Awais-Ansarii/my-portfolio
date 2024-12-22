@@ -7,6 +7,7 @@ import CheckCircleIcon from "@/assets/icons/check-circle.svg";
 import ArrowUpRightIcon from "@/assets/icons/arrow-up-right.svg";
 import GrainImage from "@/assets/images/grain.jpg";
 import SectionHeader from "@/components/SectionHeader";
+import Card from "@/components/Card";
 const portfolioProjects = [
   {
     company: "Acme Corp",
@@ -55,8 +56,8 @@ export const ProjectsSection = () => {
         <div className="flex flex-col gap-20 mt-10 md:mt-20">
           {portfolioProjects?.map((project, index) => {
             return (
-              <div
-                className="bg-gray-800 rounded-3xl relative after:content-'' after:absolute after:inset-0 after:outline-2 after:outline  after:-outline-offset-2 after:rounded-3xl z-0 after:z-10 after:outline-white/20 overflow-hidden px-8 md:px-10 lg:px-12 pt-8 lg:pt-16 md:pt-12 after:pointer-events-none"
+              <Card
+                className={"px-8 md:px-10 lg:px-12 pt-8 lg:pt-16 md:pt-12 pb-0"}
                 key={index}
               >
                 <div
@@ -65,36 +66,36 @@ export const ProjectsSection = () => {
                 ></div>
                 <div className="lg:grid lg:grid-cols-2 lg:gap-16">
                   <div className="lg:pb-16">
-                  <div className="bg-gradient-to-r from-emerald-300 to-sky-400 text-transparent bg-clip-text inline-flex uppercase font-bold tracking-widest text-sm gap-2 ">
-                    <span>{project.company}</span>
-                    <span>&bull;</span>
-                    <span>{project.year}</span>
-                  </div>
+                    <div className="bg-gradient-to-r from-emerald-300 to-sky-400 text-transparent bg-clip-text inline-flex uppercase font-bold tracking-widest text-sm gap-2 ">
+                      <span>{project.company}</span>
+                      <span>&bull;</span>
+                      <span>{project.year}</span>
+                    </div>
 
-                  <h3 className="font-serif text-2xl md:text-4xl mt-2 md:mt-5">
-                    {project.title}
-                  </h3>
-                  <hr className="mt-4 md:mt-5 border-2 border-white/5" />
-                  <ul className="flex flex-col gap-4 mt-4 md:mt-5">
-                    {project.results?.map((result, index) => {
-                      return (
-                        <li
-                          key={index}
-                          className="flex gap-2 text-sm md:text-base text-white/50"
-                        >
-                          <CheckCircleIcon className="size-5 md:size-6" />
-                          <span>{result.title}</span>
-                        </li>
-                      );
-                    })}
-                    <Link href={project.link}>
-                      <button className="bg-white text-gray-950 rounded-xl h-12 w-full font-bold inline-flex justify-center items-center gap-2 mt-8 md:w-auto px-6">
-                        <span>Visit Live Site</span>
+                    <h3 className="font-serif text-2xl md:text-4xl mt-2 md:mt-5">
+                      {project.title}
+                    </h3>
+                    <hr className="mt-4 md:mt-5 border-2 border-white/5" />
+                    <ul className="flex flex-col gap-4 mt-4 md:mt-5">
+                      {project.results?.map((result, index) => {
+                        return (
+                          <li
+                            key={index}
+                            className="flex gap-2 text-sm md:text-base text-white/50"
+                          >
+                            <CheckCircleIcon className="size-5 md:size-6" />
+                            <span>{result.title}</span>
+                          </li>
+                        );
+                      })}
+                      <Link href={project.link}>
+                        <button className="bg-white text-gray-950 rounded-xl h-12 w-full font-bold inline-flex justify-center items-center gap-2 mt-8 md:w-auto px-6">
+                          <span>Visit Live Site</span>
 
-                        <ArrowUpRightIcon className="size-4" />
-                      </button>
-                    </Link>
-                  </ul>
+                          <ArrowUpRightIcon className="size-4" />
+                        </button>
+                      </Link>
+                    </ul>
                   </div>
                   <div className="lg:relative">
                     <Image
@@ -105,7 +106,7 @@ export const ProjectsSection = () => {
                     />
                   </div>
                 </div>
-              </div>
+              </Card>
             );
           })}
         </div>
