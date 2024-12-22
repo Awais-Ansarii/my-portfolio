@@ -6,6 +6,7 @@ import Image from "next/image";
 import CheckCircleIcon from "@/assets/icons/check-circle.svg";
 import ArrowUpRightIcon from "@/assets/icons/arrow-up-right.svg";
 import GrainImage from "@/assets/images/grain.jpg";
+import SectionHeader from "@/components/SectionHeader";
 const portfolioProjects = [
   {
     company: "Acme Corp",
@@ -49,17 +50,7 @@ export const ProjectsSection = () => {
   return (
     <section className="pb-16 lg:py-24">
       <div className="container">
-        <div className="flex justify-center">
-          <p className="uppercase font-semibold tracking-widest bg-gradient-to-r from-emerald-300 to-sky-400 text-transparent bg-clip-text text-center">
-            Real World Results
-          </p>
-        </div>
-        <h2 className="text-center text-3xl md:text-5xl font-serif mt-6">
-          Featured Projects
-        </h2>
-        <p className="text-center text-white/60 mt-4 md:text-lg lg:text-xl md:max-w-md md:mx-auto">
-          See how I built these awesome projects in real life.
-        </p>
+        <SectionHeader title={"Featured Projects"} eyebrow={"Real World Results"} description={"See how I built these awesome projects in real life."} />
 
         <div className="flex flex-col gap-20 mt-10 md:mt-20">
           {portfolioProjects?.map((project, index) => {

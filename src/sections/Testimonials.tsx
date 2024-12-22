@@ -3,6 +3,7 @@ import memojiAvatar2 from "@/assets/images/memoji-avatar-2.png";
 import memojiAvatar3 from "@/assets/images/memoji-avatar-3.png";
 import memojiAvatar4 from "@/assets/images/memoji-avatar-4.png";
 import memojiAvatar5 from "@/assets/images/memoji-avatar-5.png";
+import Image from "next/image";
 
 const testimonials = [
   {
@@ -38,5 +39,30 @@ const testimonials = [
 ];
 
 export const TestimonialsSection = () => {
-  return <div>Testimonials Section</div>;
+  return (
+    <div>
+      <p>Happy Clients</p>
+      <h2>What Our Clients Say</h2>
+      <p>
+        Crack the Code to Success with CodeHelp. Elevate your programming
+        skills, solve challenges, and unlock the world of coding possibilities.
+      </p>
+      <div>
+        {testimonials.map((testimonial, index) => {
+          return (
+            <div key={index}>
+              <Image
+                src={testimonial.avatar}
+                alt={testimonial.name}
+                className=""
+              />
+              <div>{testimonial.name}</div>
+              <div>{testimonial.position}</div>
+              <p>{testimonial.text}</p>
+            </div>
+          );
+        })}
+      </div>
+    </div>
+  );
 };
