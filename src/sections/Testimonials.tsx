@@ -64,7 +64,7 @@ export const TestimonialsSection = () => {
           <div className="flex flex-none gap-8 ">
             {testimonials.map((testimonial, index) => {
               return (
-                <Card key={index} className="max-w-xs md:max-w-md md:p-8">
+                <Card key={index} className="max-w-xs md:max-w-md p-6 md:p-8">
                   <div className="flex  items-center gap-4">
                     <div className="size-14 bg-gray-700 rounded-full inline-flex items-center justify-center flex-shrink-0">
                       <Image

@@ -18,9 +18,9 @@ const ToolboxItems = ({
       className={twMerge("flex", classname)}
       style={{
         maskImage:
-          "linear-gradient(to bottom, transparent, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.7), transparent)",
+          "linear-gradient(to bottom, transparent, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.7), transparent)",
         WebkitMaskImage:
-          "linear-gradient(to bottom, transparent, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.7), transparent)",
+          "linear-gradient(to bottom, transparent, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.7), transparent)",
       }}
     >
       <div className={twMerge("flex flex-none py-0.5 gap-6 pr-6", itemsWrapperClassname)}>
