@@ -1,7 +1,9 @@
+"use client";
 import SectionHeader from "@/components/SectionHeader";
 import Card from "@/components/Card";
 import StarIcon from "@/assets/icons/star.svg";
 import BookImage from "@/assets/images/book-cover.png";
+import { motion } from "framer-motion";
 import Image from "next/image";
 import JavascriptIcon from "@/assets/icons/square-js.svg";
 import ReactIcon from "@/assets/icons/react.svg";
@@ -10,6 +12,7 @@ import MapImage from "@/assets/images/map.png";
 import MemojiSmile from "@/assets/images/memoji-smile.png";
 import CardHeader from "@/components/CardHeader";
 import ToolboxItems from "@/components/ToolboxItems";
+import { useRef } from "react";
 const technologies = [
   {
     title: "React",
@@ -90,6 +93,7 @@ const hobbies = [
   },
 ];
 export const AboutSection = () => {
+  const constraintRef = useRef(null);
   return (
     <div className="py-20 lg:py-28">
       <div className="container">
@@ -115,11 +119,15 @@ export const AboutSection = () => {
                 description="Explore the technologies and tools I am proficient in"
                 classname=""
               />
-              <ToolboxItems technologies={technologies} classname="" />
+              <ToolboxItems
+                technologies={technologies}
+                classname=""
+                itemsWrapperClassname="animate-move-left [animation-duration:30s]  "
+              />
               <ToolboxItems
                 technologies={technologies}
                 classname="mt-6"
-                itemsWrapperClassname="-translate-x-1/2"
+                itemsWrapperClassname=" animate-move-right [animation-duration:30s]"
               />
             </Card>
           </div>
@@ -134,19 +142,22 @@ export const AboutSection = () => {
               <div className="relative flex-1">
                 {hobbies.map((data, index) => {
                   return (
-                    <div
-                      className="inline-flex items-center gap-2 px-6 bg-gradient-to-r from-emerald-300 to-sky-400 rounded-full py-1.5 absolute"
+                    <motion.div
+                    ref={constraintRef}
+                      className="inline-flex items-center gap-2 px-6 bg-gradient-to-r from-emerald-300 to-sky-400 rounded-full py-1.5 absolute cursor-pointer"
                       key={index}
                       style={{
                         left: data.left,
                         top: data.top,
                       }}
+                      drag
+                      dragConstraints={constraintRef}
                     >
                       <span className="font-medium text-gray-950">
                         {data.title}
                       </span>
                       <span>{data.emoji}</span>
-                    </div>
+                    </motion.div>
                   );
                 })}
               </div>
@@ -158,7 +169,9 @@ export const AboutSection = () => {
                 className="w-full h-full object-cover"
                 priority
               />
-              <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 size-20 rounded-full bg-gradient-to-r from-emerald-300 to-sky-400 after:contents-[''] after:absolute after:inset-0 after:outline after:outline-2 after:-outline-offset-2 after:rounded-full after:outline-gray-950/30">
+              <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 size-20 rounded-full  after:contents-[''] after:absolute after:inset-0 after:outline after:outline-2 after:-outline-offset-2 after:rounded-full after:outline-gray-950/30">
+                <div className="absolute inset-0 rounded-full bg-gradient-to-r from-emerald-300 to-sky-400 -z-20 animate-ping [animation-duration:2s] "></div>
+                <div className="absolute inset-0 rounded-full bg-gradient-to-r from-emerald-300 to-sky-400 -z-10"></div>
                 <Image
                   src={MemojiSmile}
                   alt="MemojiSmile"

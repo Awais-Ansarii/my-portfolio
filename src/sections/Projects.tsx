@@ -57,8 +57,11 @@ export const ProjectsSection = () => {
           {portfolioProjects?.map((project, index) => {
             return (
               <Card
-                className={"px-8 md:px-10 lg:px-12 pt-8 lg:pt-16 md:pt-12 pb-0"}
+                className={"px-8 md:px-10 lg:px-12 pt-8 lg:pt-16 md:pt-12 pb-0 sticky top-20"}
                 key={index}
+                style={{
+                  top : `64px + ${index * 40}px`,
+                }}
               >
                 <div
                   className="absolute inset-0 -z-10 opacity-5"

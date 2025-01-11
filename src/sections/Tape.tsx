@@ -27,16 +27,18 @@ export const TapeSection = () => {
           //     "linear-gradient(to right, transparent, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.9), transparent)",
           // }}
         >
-          <div className="flex flex-none gap-4 py-3">
-            {words.map((word, index) => {
-              return (
-                <div key={index} className="inline-flex gap-4 items-center">
-                  <span className="text-gray-900 uppercase font-extrabold text-sm">
-                    {word}
-                  </span>
-                  <StarIcon className="size-6 text-gray-900 -rotate-12" />
-                </div>
-              );
+          <div className="flex flex-none gap-4 py-3 pr-4 animate-move-left [animation-duration:30s]">
+            {[...new Array(2)].fill(0).map((_, index) => {
+              return words.map((word, index) => {
+                return (
+                  <div key={index} className="inline-flex gap-4 items-center">
+                    <span className="text-gray-900 uppercase font-extrabold text-sm">
+                      {word}
+                    </span>
+                    <StarIcon className="size-6 text-gray-900 -rotate-12" />
+                  </div>
+                );
+              });
             })}
           </div>
         </div>
