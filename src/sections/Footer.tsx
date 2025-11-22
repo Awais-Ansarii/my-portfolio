@@ -21,7 +21,11 @@ export const Footer = () => {
               <ArrowUpRightIcon className="size-4" />
             </Link>
             <Link href={`#`} className="inline-flex items-center gap-x-1">
-              <span className="font-semibold">LinkedIn</span>
+              <span className="font-semibold">Github</span>
+              <ArrowUpRightIcon className="size-4" />
+            </Link>
+            <Link href={`#`} className="inline-flex items-center gap-x-1">
+              <span className="font-semibold">Leetcode</span>
               <ArrowUpRightIcon className="size-4" />
             </Link>
           </nav>

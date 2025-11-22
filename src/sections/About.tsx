@@ -104,7 +104,7 @@ export const AboutSection = () => {
         />
         <div className="mt-20 flex flex-col gap-6">
           <div className="grid grid-cols-1 gap-8 md:grid-cols-5 lg:grid-cols-3">
-            <Card className="h-[320px] md:col-span-2 lg:col-span-1">
+            {/* <Card className="h-[320px] md:col-span-2 lg:col-span-1">
               <CardHeader
                 title="My Reads"
                 description="Explore the books shaping my perspective"
@@ -112,8 +112,8 @@ export const AboutSection = () => {
               <div className="w-40 mx-auto mt-2 md:mt-0">
                 <Image src={BookImage} alt="Book Cover" className="" />
               </div>
-            </Card>
-            <Card className="h-[320px]  md:col-span-3 lg:col-span-2">
+            </Card> */}
+            <Card className="h-[320px]  md:col-span-3 lg:col-span-3">
               <CardHeader
                 title="My Tech-Stack"
                 description="Explore the technologies and tools I am proficient in"
@@ -134,34 +134,32 @@ export const AboutSection = () => {
 
           <div className="grid grid-cols-1 gap-8 md:grid-cols-5 lg:grid-cols-3">
             <Card className="h-[320px] p-0 flex flex-col md:col-span-3 lg:col-span-2">
-              <CardHeader
-                title="Beyond the Code"
-                description="Explore my interests and hobbies"
-                classname="px-6 py-6"
-              />
-              <div className="relative flex-1">
-                {hobbies.map((data, index) => {
-                  return (
-                    <motion.div
-                    ref={constraintRef}
-                      className="inline-flex items-center gap-2 px-6 bg-gradient-to-r from-emerald-300 to-sky-400 rounded-full py-1.5 absolute cursor-pointer"
-                      key={index}
-                      style={{
-                        left: data.left,
-                        top: data.top,
-                      }}
-                      drag
-                      dragConstraints={constraintRef}
-                    >
-                      <span className="font-medium text-gray-950">
-                        {data.title}
-                      </span>
-                      <span>{data.emoji}</span>
-                    </motion.div>
-                  );
-                })}
-              </div>
-            </Card>
+  <CardHeader
+    title="Beyond the Code"
+    description="Explore my interests and hobbies"
+    classname="px-6 py-6"
+  />
+
+  <div className="relative flex-1" ref={constraintRef}>
+    {hobbies.map((data, index) => (
+      <motion.div
+        key={index}
+        className="inline-flex items-center gap-2 px-6 bg-gradient-to-r from-emerald-300 to-sky-400 rounded-full py-1.5 absolute cursor-pointer"
+        style={{
+          left: data.left,
+          top: data.top,
+        }}
+        drag
+        dragMomentum={false}
+        dragConstraints={constraintRef}
+      >
+        <span className="font-medium text-gray-950">{data.title}</span>
+        <span>{data.emoji}</span>
+      </motion.div>
+    ))}
+  </div>
+</Card>
+
             <Card className="h-[320px] p-0 relative md:col-span-2 lg:col-span-1">
               <Image
                 src={MapImage}
