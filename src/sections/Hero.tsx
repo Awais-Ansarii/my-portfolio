@@ -5,6 +5,7 @@ import StarIcon from "@/assets/icons/star.svg";
 import SparckleIcon from "@/assets/icons/sparkle.svg";
 import GrainImage from "@/assets/images/grain.jpg";
 import HeroOrbit from "@/components/HeroOrbit";
+import Link from "next/link";
 
 export const HeroSection = ({}) => {
   return (
@@ -154,14 +155,14 @@ export const HeroSection = ({}) => {
           </p>
         </div>
         <div className="flex flex-col md:flex-row md:justify-center items-center mt-8 gap-4">
-          <button className="inline-flex items-center gap-2 border cursor-pointer rounded-xl border-white/15 px-6 h-12">
-            <span className="font-semibold">Explore My Work</span>
-            <ArrowDown className="size-4" />
-          </button>
-          <button className="inline-flex px-6 h-12 text-gray-900 items-center gap-2 border cursor-pointer rounded-xl border-white bg-white">
-            <span>👋</span>
-            <span className="font-semibold">Let's Connect</span>
-          </button>
+          {/* <Link href={"#contact"} className="inline-flex items-center gap-2 border cursor-pointer rounded-xl border-white/15 px-6 h-12">
+           <span>👋</span>
+            <span className="font-semibold">Let&apos;s Connect</span>
+          </Link> */}
+          <Link href={"#contact"} className="group inline-flex px-6 h-12 relative z-[999] text-gray-800  items-center gap-2 border cursor-pointer rounded-xl border-white bg-white">
+            <span className="group-hover:animate-ping hover:!text-gray-950">👋</span>
+            <span className="font-semibold hover:text-gray-950">Let&apos;s Connect</span>
+          </Link>
         </div>
       </div>
     </div>
