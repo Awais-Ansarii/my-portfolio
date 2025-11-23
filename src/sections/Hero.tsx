@@ -9,7 +9,7 @@ import Link from "next/link";
 
 export const HeroSection = ({}) => {
   return (
-    <div className="py-32 md:py-44 lg:py-56 relative z-0 overflow-x-clip">
+    <section className="py-32 md:py-44 lg:py-56 relative z-0 overflow-x-clip">
       <div
         className="absolute inset-0 [mask-image:linear-gradient(to bottom, transparent, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.7), transparent)]"
         style={{
@@ -159,12 +159,12 @@ export const HeroSection = ({}) => {
            <span>👋</span>
             <span className="font-semibold">Let&apos;s Connect</span>
           </Link> */}
-          <Link href={"#contact"} className="group inline-flex px-6 h-12 relative z-[999] text-gray-800  items-center gap-2 border cursor-pointer rounded-xl border-white bg-white">
+          <Link href={"#contact"} className="group inline-flex px-6 h-12 relative z-[999] text-gray-900  items-center gap-2 border cursor-pointer rounded-xl border-white bg-white">
             <span className="group-hover:animate-ping hover:!text-gray-950">👋</span>
             <span className="font-semibold hover:text-gray-950">Let&apos;s Connect</span>
           </Link>
         </div>
       </div>
-    </div>
+    </section>
   );
 };

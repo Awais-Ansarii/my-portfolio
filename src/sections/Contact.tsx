@@ -31,7 +31,7 @@ export const ContactSection = ({}) => {
   return (
     <div className="py-16 pt-10 ">
       <div className="container">
-        <div id="contact" className="relative text-center md:text-left bg-gradient-to-r from-emerald-300 to-sky-400 rounded-3xl py-8 px-10 text-gray-900 overflow-hidden z-0">
+        <div id="contact" className="relative text-center md:text-left bg-gradient-to-r from-emerald-300 to-sky-400 rounded-3xl py-8 lg:py-16 px-10 text-gray-900 overflow-hidden z-0">
           <div
             className="absolute inset-0 -z-10 opacity-10"
             style={{
