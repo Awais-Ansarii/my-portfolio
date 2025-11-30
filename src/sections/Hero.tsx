@@ -154,12 +154,12 @@ export const HeroSection = ({}) => {
             stack applications using the latest technologies and best practices.
           </p>
         </div>
-        <div className="flex flex-col md:flex-row md:justify-center items-center mt-8 gap-4">
+        <div className="w-full mx-auto flex flex-col md:flex-row md:justify-center items-center mt-8 gap-4">
           {/* <Link href={"#contact"} className="inline-flex items-center gap-2 border cursor-pointer rounded-xl border-white/15 px-6 h-12">
            <span>👋</span>
             <span className="font-semibold">Let&apos;s Connect</span>
           </Link> */}
-          <Link href={"#contact"} className="group inline-flex px-6 h-12 relative z-[999] text-gray-900  items-center gap-2 border cursor-pointer rounded-xl border-white bg-white">
+          <Link href={"#contact"} className="group  inline-flex px-6 h-12 relative z-[999] text-gray-900  items-center gap-2 border cursor-pointer rounded-xl border-white bg-white">
             <span className="group-hover:animate-ping hover:!text-gray-950">👋</span>
             <span className="font-semibold hover:text-gray-950">Let&apos;s Connect</span>
           </Link>

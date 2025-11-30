@@ -6,8 +6,42 @@ import StarIcon from "@/assets/icons/star.svg";
 import BookImage from "@/assets/images/book-cover.png";
 import { motion } from "framer-motion";
 import Image from "next/image";
+
+import JavaIcon from "@/assets/icons/java.svg";
 import JavascriptIcon from "@/assets/icons/square-js.svg";
 import ReactIcon from "@/assets/icons/react.svg";
+import NextIcon from "@/assets/icons/Next.svg";
+import NodeIcon from "@/assets/icons/node-js-svgrepo-com.svg";
+import ExpressIcon from "@/assets/icons/Express.svg";
+import SqlIcon from "@/assets/icons/sql.svg";
+import TsIcon from "@/assets/icons/ts.svg";
+import MySqlIcon from "@/assets/icons/mysql.svg";
+import MongoIcon from "@/assets/icons/mongodb.svg";
+import PostgresqlIcon from "@/assets/icons/postgresql.svg";
+import WSIcon from "@/assets/icons/ws.svg";
+import AWSIcon from "@/assets/icons/aws.svg";
+import DokIcon from "@/assets/icons/doc.svg";
+import K8Icon from "@/assets/icons/k8s.svg";
+import GitIcon from "@/assets/icons/git.svg";
+import JenkinIcon from "@/assets/icons/jenkins.svg";
+import ReduxIcon from "@/assets/icons/redux.svg";
+import TailwindIcon from "@/assets/icons/css.svg";
+import NginxIcon from "@/assets/icons/nginx.svg";
+import GraphIcon from "@/assets/icons/graph.svg";
+import RestIcon from "@/assets/icons/rest.svg";
+
+
+
+
+
+
+
+
+
+
+
+
+
 import TechIcon from "@/components/TechIcon";
 import MapImage from "@/assets/images/map.png";
 
@@ -17,12 +51,42 @@ import CardHeader from "@/components/CardHeader";
 import ToolboxItems from "@/components/ToolboxItems";
 import { useRef } from "react";
 
-const technologies = [
-  { title: "React", iconType: ReactIcon },
-  { title: "Javascript", iconType: JavascriptIcon },
-  { title: "Node.Js", iconType: ReactIcon },
-  { title: "Next.Js", iconType: JavascriptIcon },
+const tools = [
+  
+  { title: "MySQL", iconType: MySqlIcon },
+  { title: "Mongo DB", iconType: MongoIcon },
+  { title: "PostgreSQL", iconType: PostgresqlIcon },
+  { title: "Web Sockets", iconType: WSIcon },
+  { title: "AWS", iconType: AWSIcon },
+  { title: "Docker", iconType: DokIcon },
+  { title: "Kubernetes", iconType: K8Icon },
+  { title: "Github Actions", iconType: GitIcon },
+  { title: "Jenkins", iconType: JenkinIcon },
+  { title: "Redux", iconType: ReduxIcon },
+  { title: "Tailwind", iconType: TailwindIcon },
+  { title: "Nginx", iconType: NginxIcon },
+  { title: "GraphQL", iconType: GraphIcon },
+  { title: "REST Api", iconType: RestIcon },
+
+
+  
+
+  
+
 ];
+
+const languageTech = [
+  { title: "Java", iconType: JavaIcon },
+  { title: "Javascript", iconType: JavascriptIcon },
+  { title: "Typescript", iconType: TsIcon },
+  { title: "React", iconType: ReactIcon },
+  { title: "Next.js", iconType: NextIcon },
+  { title: "Node.js", iconType: NodeIcon },
+  { title: "Express.js", iconType: ExpressIcon },
+  { title: "SQL", iconType: SqlIcon },
+
+];
+
 
 const hobbies = [
   { title: "Reading", emoji: "📚", left: "5%", top: "5%" },
@@ -81,11 +145,11 @@ export const AboutSection = () => {
                 description="Explore the skills, technologies and tools I am proficient in"
               />
               <ToolboxItems
-                technologies={technologies}
+                technologies={languageTech}
                 itemsWrapperClassname="animate-move-left [animation-duration:30s]"
               />
               <ToolboxItems
-                technologies={technologies}
+                technologies={tools}
                 classname="mt-6"
                 itemsWrapperClassname="animate-move-right [animation-duration:30s]"
               />

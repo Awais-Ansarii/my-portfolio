@@ -44,6 +44,13 @@ const Header = () => {
         >
           Skills
         </Link>
+        <Link
+          href="#certification"
+          onClick={() => setActive("#certification")}
+          className={`nav-item ${active === "#certification" ? SelectedSectionCss : ""}`}
+        >
+          Certifications
+        </Link>
 
 
         <Link

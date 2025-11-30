@@ -1,55 +1,51 @@
-import memojiAvatar1 from "@/assets/images/memoji-avatar-1.png";
-import memojiAvatar2 from "@/assets/images/memoji-avatar-2.png";
-import memojiAvatar3 from "@/assets/images/memoji-avatar-3.png";
-import memojiAvatar4 from "@/assets/images/memoji-avatar-4.png";
-import memojiAvatar5 from "@/assets/images/memoji-avatar-5.png";
+
 import SectionHeader from "@/components/SectionHeader";
 import Image from "next/image";
-import GrainImage from "@/assets/images/grain.jpg";
+
 import Card from "@/components/Card";
 import { Fragment } from "react";
+import Link from "next/link";
+import { MoveUpRight } from "lucide-react";
 const testimonials = [
-  {
-    name: "Alex Turner",
-    position: "Marketing Manager @ TechStartups",
-    text: "Alex was instrumental in transforming our website into a powerful marketing tool. His attention to detail and ability to understand our brand is exceptional. We're thrilled with the results!",
-    avatar: memojiAvatar1,
-  },
-  {
-    name: "Olivia Green",
-    position: "Head of Design @ GreenLeaf",
-    text: "Working with Alex was a pleasure. His expertise in frontend development brought our designs to life in a way we never imagined. The website has exceeded our expectations.",
-    avatar: memojiAvatar2,
-  },
-  {
-    name: "Daniel White",
-    position: "CEO @ InnovateCo",
-    text: "Alex's ability to create seamless user experiences is unmatched. Our website has seen a significant increase in conversions since launching the new design. We couldn't be happier.",
-    avatar: memojiAvatar3,
-  },
-  {
-    name: "Emily Carter",
-    position: "Product Manager @ GlobalTech",
-    text: "Alex is a true frontend wizard. He took our complex product and transformed it into an intuitive and engaging user interface. We're already seeing positive feedback from our customers.",
-    avatar: memojiAvatar4,
-  },
-  {
-    name: "Michael Brown",
-    position: "Director of IT @ MegaCorp",
-    text: "Alex's work on our website has been nothing short of exceptional. He's a talented developer who is also a great communicator. We highly recommend him.",
-    avatar: memojiAvatar5,
-  },
+ {
+  name: "Namaste React Live Course by Akshay Saini",
+  platform: "Namaste Dev",
+  certificateUrl:"https://s3-ap-southeast-1.amazonaws.com/learnyst/schools/148878/certificates/142240/8046034_142240.pdf?1683865560",
+  platformUrl:"https://namastedev.com/",
+  description: "A hands-on advanced React training focused on deep internals like Fiber architecture, custom hooks, and performance optimization."
+},
+{
+  name: "Full Stack Development with React.js & Node.js Live",
+  platform: "GeeksforGeeks",
+  certificateUrl:"https://media.geeksforgeeks.org/courses/certificates/99f99c85c701ebaf3c4ef119ad49de14.pdf",
+  platformUrl:"https://www.geeksforgeeks.org/",
+  description: "Practical full-stack training covering REST APIs, authentication, deployment workflows, and building scalable web applications."
+},
+{
+  name: "Advance React",
+  platform: "Coding Ninjas",
+  certificateUrl:"https://certificate.codingninjas.com/view/38657912a8ab7f14",
+  platformUrl:"https://www.codingninjas.com/",
+  description: "Advanced concepts in React including routing, context API, component patterns, and performance-driven UI development."
+},
+{
+  name: "Back End — Full Stack Web Development in Node.js",
+  platform: "Coding Ninjas",
+  certificateUrl:"https://certificate.codingninjas.com/view/ae894c7e869bf212",
+  platformUrl:"https://www.codingninjas.com/",
+  description: "Backend specialization in Node.js with Express.js, MongoDB, authentication workflows, and API development using MVC architecture."
+}
+
 ];
 
 export const TestimonialsSection = () => {
   return (
-    <div className="py-16 lg:py-24">
+    <div id={"certification"} className="py-16 lg:py-24">
       <div className="container">
         <SectionHeader
-          title={"Happy Clients"}
-          eyebrow={"What Our Clients Say"}
-          description={`Crack the Code to Success with CodeHelp. Elevate your programming
-        skills, solve challenges, and unlock the world of coding possibilities.`}
+          title={"Certifications"}
+          eyebrow={"Industry-Recognized Certifications"}
+          description={`I believe in continuous learning. Here are some certifications I’ve earned to strengthen my skills in full-stack web development and modern engineering practices.`}
         />
 
         <div
@@ -58,11 +54,9 @@ export const TestimonialsSection = () => {
             maskImage:
               "linear-gradient(to right, transparent, rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.9), transparent)",
           }}
-          //   WebkitMaskImage:
-          //     "linear-gradient(to right, transparent, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.9), transparent)",
-          // }}
+          
         >
-          <div className="flex flex-none gap-8 pr-8 animate-move-left [animation-duration:70s] hover:[animation-play-state:paused] ">
+          <div className="flex flex-none gap-8 pr-8 animate-move-left [animation-duration:40s] hover:[animation-play-state:paused] ">
             {[...new Array(2)].fill(0).map((_, index) => { 
               return (
                 <Fragment key={index}>
@@ -70,30 +64,47 @@ export const TestimonialsSection = () => {
                     return (
                       <Card
                         key={index}
-                        className="cursor-pointer max-w-xs md:max-w-md p-6 md:p-8 hover:rotate-3 transition duraation-300 "
+                        className=" max-w-xs md:max-w-[460px] p-6 md:p-8 hover:rotate-3 transition duraation-300 "
                       >
                         <div className="flex  items-center gap-4">
-                          <div className="size-14 bg-gray-700 rounded-full inline-flex items-center justify-center flex-shrink-0">
-                            <Image
-                              src={testimonial.avatar}
-                              alt={testimonial.name}
-                              className="max-h-full max-w-14"
-                            />
-                          </div>
+                         
 
-                          <div className="">
-                            <div className="font-semibold">
-                              {testimonial.name}
-                            </div>
-                            <div className="text-white/40 text-sm ">
-                              {testimonial.position}
-                            </div>
+                          <div className="flex flex-col items-start gap-y-2">
+                            <Link href={testimonial.certificateUrl}
+                              target="_blank"
+                              className="font-semibold flex flex-row items-start gap-x-1 hover:text-emerald-300 text-sky-400">
+                              <span>{testimonial.name}</span>
+                              <MoveUpRight size={19} className="pt-1 cursor-pointer hover:text-emerald-300 text-sky-400"  />
+                              
+                            </Link>
+
+                            <Link href={testimonial.platformUrl}
+                              target="_blank" className="flex flex-row items-start gap-x-1  text-white/40 hover:text-white/80 text-sm ">
+                              <span>
+                               {" Plateform: "}
+                              {testimonial.platform}
+
+                              </span>
+
+                              <MoveUpRight size={19} className="pt-1 cursor-pointer text-white/40 hover:text-white/80"  />
+                            </Link>
+                            
+
+
+
                           </div>
                         </div>
 
-                        <p className="mt-4 md:mt-6 text-sm md:text-base">
-                          {testimonial.text}
+                        <p className="mt-4 md:mt-6 text-sm md:text-base ">
+                          {testimonial.description}
                         </p>
+
+                         <Link href={testimonial.certificateUrl}
+                              target="_blank"
+                              className="mt-4 md:mt-6 text-sm md:text-base  font-semibold flex flex-row items-start gap-x-1 hover:text-emerald-300 text-white/60 border border-white rounded-[24px] px-4 py-2 w-fit hover:border-emerald-300">
+                              View Certificate
+                              
+                            </Link>
                       </Card>
                     );
                   })}
