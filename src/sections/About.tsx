@@ -30,18 +30,6 @@ import NginxIcon from "@/assets/icons/nginx.svg";
 import GraphIcon from "@/assets/icons/graph.svg";
 import RestIcon from "@/assets/icons/rest.svg";
 
-
-
-
-
-
-
-
-
-
-
-
-
 import TechIcon from "@/components/TechIcon";
 import MapImage from "@/assets/images/map.png";
 
@@ -50,9 +38,10 @@ import MemojiSmile from "@/assets/images/memoji-smile.png";
 import CardHeader from "@/components/CardHeader";
 import ToolboxItems from "@/components/ToolboxItems";
 import { useRef } from "react";
+import Link from "next/link";
+import { MoveUpRight } from "lucide-react";
 
 const tools = [
-  
   { title: "MySQL", iconType: MySqlIcon },
   { title: "Mongo DB", iconType: MongoIcon },
   { title: "PostgreSQL", iconType: PostgresqlIcon },
@@ -67,12 +56,6 @@ const tools = [
   { title: "Nginx", iconType: NginxIcon },
   { title: "GraphQL", iconType: GraphIcon },
   { title: "REST Api", iconType: RestIcon },
-
-
-  
-
-  
-
 ];
 
 const languageTech = [
@@ -84,9 +67,7 @@ const languageTech = [
   { title: "Node.js", iconType: NodeIcon },
   { title: "Express.js", iconType: ExpressIcon },
   { title: "SQL", iconType: SqlIcon },
-
 ];
-
 
 const hobbies = [
   { title: "Reading", emoji: "📚", left: "5%", top: "5%" },
@@ -95,6 +76,14 @@ const hobbies = [
   { title: "Music", emoji: "🎷", left: "10%", top: "35%" },
   { title: "Paiting", emoji: "🎨", left: "70%", top: "45%" },
   { title: "Hangout", emoji: "🥳", left: "45%", top: "70%" },
+];
+
+const Blogs = [
+  {
+    title: "From Legacy Code to 100% Performance: My Next.js Migration Journey",
+    desc: "A detailed account of how I migrated a legacy codebase to Next.js — and achieved a major performance boost, improved architecture and smoother user experience.",
+    url: "https://medium.com/@awaisdev/from-legacy-code-to-100-performance-my-next-js-migration-journey-c744db1fde82",
+  },
 ];
 
 export const AboutSection = () => {
@@ -112,13 +101,12 @@ export const AboutSection = () => {
 
       const otherRect = other.getBoundingClientRect();
 
-      const overlap =
-        !(
-          draggedRect.right < otherRect.left ||
-          draggedRect.left > otherRect.right ||
-          draggedRect.bottom < otherRect.top ||
-          draggedRect.top > otherRect.bottom
-        );
+      const overlap = !(
+        draggedRect.right < otherRect.left ||
+        draggedRect.left > otherRect.right ||
+        draggedRect.bottom < otherRect.top ||
+        draggedRect.top > otherRect.bottom
+      );
 
       if (overlap) {
         // Slide 40px to the right
@@ -157,8 +145,50 @@ export const AboutSection = () => {
           </div>
 
           <div className="grid grid-cols-1 gap-8 md:grid-cols-5 lg:grid-cols-3">
+            <Card className="md:min-h-[320px] p-0 flex flex-col md:col-span-3 lg:col-span-2">
+              <CardHeader
+                title="Read My Blogs"
+                description="Dive into my curated technology blogs where I share hands-on experience, solutions, and ideas."
+                classname="px-6 py-6"
+              />
+
+              <div className=" mx-4 md:mx-8 h-full mb-2 md:mb-4 ">
+                {Blogs?.map((blog, index) => {
+                  return (
+                    <div
+                       
+                      key={index}
+                      className=" !w-full h-full !bg-gray-700/70 p-4  rounded-2xl"
+                    >
+                        <Link
+                          href={blog.url}
+                          target="_blank"
+                          className="font-semibold flex flex-row items-start gap-x-1 hover:text-emerald-300 text-sky-400 text-lg"
+                        >
+                          {blog.title}
+                          
+                        </Link>
+                      
+
+                      <p className="mt-4 text-sm md:text-base ">
+                        {blog.desc}
+                      </p>
+
+                      <Link
+                        href={blog.url}
+                        target="_blank"
+                        className="mt-4 text-sm md:text-base  font-semibold flex flex-row items-start gap-x-1 hover:text-emerald-300 text-white/60 border border-white rounded-[24px] px-4 py-2 w-fit hover:border-emerald-300"
+                      >
+                        Read Blog
+                      </Link>
+                    </div>
+                  );
+                })}
+              </div>
+            </Card>
+
             {/* ---- 🎨 Hobbies Card (Updated Fully) ---- */}
-            <Card className="h-[320px] p-0 flex flex-col md:col-span-3 lg:col-span-2">
+            {/* <Card className=" h-[320px] p-0 flex flex-col md:col-span-3 lg:col-span-2">
               <CardHeader
                 title="Beyond the Code"
                 description="Explore my interests and hobbies"
@@ -190,12 +220,12 @@ export const AboutSection = () => {
                   </motion.div>
                 ))}
               </div>
-            </Card>
+            </Card> */}
 
             {/* ---- Map Card ---- */}
-            <Card className="h-[320px] p-0 relative md:col-span-2 lg:col-span-1">
+            <Card className="md:min-h-[320px] p-0 relative md:col-span-2 lg:col-span-1">
               <Image
-                src={MapImage2  }
+                src={MapImage2}
                 alt="Map"
                 className="w-full h-full object-cover"
                 priority
