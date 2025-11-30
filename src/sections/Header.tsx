@@ -11,12 +11,13 @@ const Header = () => {
 
   return (
     <div className="flex justify-center items-center fixed top-3 z-50 mx-auto w-full">
-      <nav className="flex gap-1 p-0.5 border border-white/15 bg-white/10 rounded-full backdrop-blur">
+      <nav className=
+        "max-md:w-[93%] max-md:mx-auto flex justify-between !gap-0 md:gap-1 p-0.5 border border-white/15 bg-white/10 rounded-full backdrop-blur">
 
         <Link
           href="#"
           onClick={() => setActive("#")}
-          className={`nav-item ${active === "#" ? SelectedSectionCss : ""}`}
+          className={`nav-item ${active === "#" ? SelectedSectionCss : ""} max-md:!px-2`}
         >
           Home
         </Link>
@@ -24,7 +25,7 @@ const Header = () => {
         <Link
           href="#project"
           onClick={() => setActive("#project")}
-          className={`nav-item ${active === "#project" ? SelectedSectionCss : ""}`}
+          className={`nav-item ${active === "#project" ? SelectedSectionCss : ""} max-md:!px-2`}
         >
           Projects
         </Link>
@@ -32,31 +33,45 @@ const Header = () => {
         <Link
           href="#about"
           onClick={() => setActive("#about")}
-          className={`nav-item ${active === "#about" ? SelectedSectionCss : ""}`}
+          className={`nav-item ${active === "#about" ? SelectedSectionCss : ""} max-md:hidden max-md:!px-2`}
         >
           About
+        </Link>
+        <Link
+          href="#about"
+          onClick={() => setActive("#about")}
+          className={`nav-item ${active === "#about" ? SelectedSectionCss : ""} md:hidden max-md:!px-2`}
+        >
+          Skills
         </Link>
 
         <Link
           href="#skill"
           onClick={() => setActive("#skill")}
-          className={`nav-item ${active === "#skill" ? SelectedSectionCss : ""}`}
+          className={`nav-item ${active === "#skill" ? SelectedSectionCss : ""} max-md:hidden max-md:!px-2`}
         >
           Skills
         </Link>
         <Link
           href="#certification"
           onClick={() => setActive("#certification")}
-          className={`nav-item ${active === "#certification" ? SelectedSectionCss : ""}`}
+          className={`nav-item ${active === "#certification" ? SelectedSectionCss : ""} max-md:hidden  max-md:!px-2`}
         >
           Certifications
+        </Link>
+        <Link
+          href="#certification"
+          onClick={() => setActive("#certification")}
+          className={`nav-item ${active === "#certification" ? SelectedSectionCss : ""} md:hidden max-md:!px-2`}
+        >
+          Certificates
         </Link>
 
 
         <Link
           href="#contact"
           onClick={() => setActive("#contact")}
-          className={`nav-item ${active === "#contact" ? SelectedSectionCss : ""}`}
+          className={`nav-item ${active === "#contact" ? SelectedSectionCss : ""} max-md:!px-2`}
         >
           Contact
         </Link>

@@ -139,7 +139,7 @@ export const AboutSection = () => {
 
         <div className="mt-20 flex flex-col gap-6">
           <div className="grid grid-cols-1 gap-8 md:grid-cols-5 lg:grid-cols-3">
-            <Card className="h-[320px] md:col-span-3 lg:col-span-3">
+            <Card className="h-[320px] md:col-span-6 lg:col-span-3">
               <CardHeader
                 title="Skills & Tech-Stack"
                 description="Explore the skills, technologies and tools I am proficient in"

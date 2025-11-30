@@ -38,7 +38,7 @@ export const ContactSection = ({}) => {
               backgroundImage: `url(${GrainImage.src})`,
             }}
           ></div>
-          <div className="flex flex-col md:flex-row items-center md:justify-between gap-8 md:gap-12">
+          <div className="flex flex-col lg:flex-row items-center md:justify-between gap-8 md:gap-12">
             <div>
               <h2 className="font-serif text-2xl md:text-3xl">
                 Lets Connect with Me
@@ -48,13 +48,15 @@ export const ContactSection = ({}) => {
               </p>
               
             </div>
-            <div className="">
+            {/* <div className=""> */}
 
               {/* <button className="cursor-pointer text-white bg-gray-900 inline-flex gap-2  items-center px-6 h-12 rounded-xl w-max border border-gray-900">
                 <span className="font-semibold">Contact Me</span>
                 <ArrowUpRightIcon className="size-4 " />
               </button> */}
-<nav className="flex flex-col md:flex-row items-center gap-6 text-white bg-gray-900/90 px-6 h-12 rounded-xl w-max border border-gray-900">
+              <nav className=
+                "flex flex-row items-center max-md:!flex-wrap gap-8 md:gap-6 text-white bg-gray-900/90 px-6 h-12 rounded-xl w-max border border-gray-900 max-md:w-[100%] max-md:h-full max-md:py-8 max-lg:py-6"
+              >
             {SocialsData.map(({ name, icon: Icon, url }) => (
               <Link key={name} href={url} target="_blank" className="hover:text-emerald-200 inline-flex items-center gap-x-1 cursor-pointer">
                 <Icon className="size-6" />
@@ -62,7 +64,7 @@ export const ContactSection = ({}) => {
               </Link>
             ))}
           </nav>
-            </div>
+            {/* </div> */}
           </div>
         </div>
       </div>
