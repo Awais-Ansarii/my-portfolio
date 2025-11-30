@@ -23,6 +23,14 @@ const Header = () => {
         </Link>
 
         <Link
+          href="#experience"
+          onClick={() => setActive("#experience")}
+          className={`nav-item ${active === "#experience" ? SelectedSectionCss : ""} max-md:!px-2`}
+        >
+          Experience
+        </Link>
+
+        <Link
           href="#project"
           onClick={() => setActive("#project")}
           className={`nav-item ${active === "#project" ? SelectedSectionCss : ""} max-md:!px-2`}
@@ -59,13 +67,13 @@ const Header = () => {
         >
           Certifications
         </Link>
-        <Link
+        {/* <Link
           href="#certification"
           onClick={() => setActive("#certification")}
           className={`nav-item ${active === "#certification" ? SelectedSectionCss : ""} md:hidden max-md:!px-2`}
         >
           Certificates
-        </Link>
+        </Link> */}
 
 
         <Link

@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import {Inter, Calistoga} from "next/font/google";
 import "./globals.css";
+import ScrollToTop from "@/components/ScrollToTop";
 
 export const metadata: Metadata = {
   title: "Awais | Portfolio",
@@ -37,6 +38,7 @@ export default function RootLayout({
       {`${inter.variable}  ${calistoga.variable}
        bg-gray-900 text-white antialiased font-sans`}>
         {children}
+        <ScrollToTop />
         </body>
     </html>
   );
