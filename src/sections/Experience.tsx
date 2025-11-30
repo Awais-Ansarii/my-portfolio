@@ -1,8 +1,4 @@
-import darkSaasLandingPage from "@/assets/images/dark-saas-landing-page.png";
-import lightSaasLandingPage from "@/assets/images/light-saas-landing-page.png";
-import aiStartupLandingPage from "@/assets/images/ai-startup-landing-page.png";
 import Link from "next/link";
-import Image from "next/image";
 import CheckCircleIcon from "@/assets/icons/check-circle.svg";
 import ArrowUpRightIcon from "@/assets/icons/arrow-up-right.svg";
 import GrainImage from "@/assets/images/grain.jpg";
@@ -16,12 +12,10 @@ const portfolioProjects = [
     year: "2024 - 2026",
     title: "Software Engineer",
     results: [
-      { title: "Enhanced user experience by 40%" },
-      { title: "Improved site speed by 50%" },
-      { title: "Increased mobile traffic by 35%" },
+      { title: "Integrated multiple 3rd-party web-hooks and APIs" },
+      { title: "Set up CI/CD pipelines via GitLab Jenkins to automate linting, building and deployment of several applications." },
+      { title: "Extended authentication module to support custom 3-factor authentication (3FA) flows by customising existing auth library (better-auth), adding security beyond defaults." },
     ],
-    link: "https://youtu.be/4k7IdSLxh6w",
-    image: darkSaasLandingPage,
   },
   
 ];
@@ -77,30 +71,17 @@ const portfolioProjects = [
                         return (
                           <li
                             key={index}
-                            className="flex gap-2 text-sm md:text-base text-white/50"
+                            className="flex flex-row items-start justify-start gap-2 text-sm md:text-base text-white/50"
                           >
-                            <CheckCircleIcon className="size-5 md:size-6" />
+                            <CheckCircleIcon  className="size-5 md:size-6 shrink-0" />
                             <span>{result.title}</span>
                           </li>
                         );
                       })}
-                      {/* <Link href={project.link}>
-                        <button className="bg-white text-gray-950 rounded-xl h-12 w-full font-bold inline-flex justify-center items-center gap-2 mt-8 md:w-auto px-6">
-                          <span>Visit Live Site</span>
-
-                          <ArrowUpRightIcon className="size-4" />
-                        </button>
-                      </Link> */}
+                      
                     </ul>
                   </div>
-                  {/* <div className="lg:relative">
-                    <Image
-                      src={project.image}
-                      alt={project.title}
-                      priority
-                      className="mt-8 -mb-4 md:-mb-0 lg:mt-0 lg:absolute lg:w-auto lg:h-full lg:max-w-none"
-                    />
-                  </div> */}
+                 
                 </div>
               </Card>
             );
