@@ -51,7 +51,9 @@ export const ProjectsSection = () => {
   return (
     <section id={"project"} className="pb-16 lg:py-24">
       <div  className="container">
-        <SectionHeader title={"Projects"} eyebrow={"Real World Results"} description={"See how I built these awesome projects in real life."} />
+        <SectionHeader
+          title={"Projects"} eyebrow={"Real World Results"}
+          description={""} />
 
         <div className="flex flex-col gap-20 mt-10 md:mt-20">
           {portfolioProjects?.map((project, index) => {

@@ -33,7 +33,7 @@ const portfolioProjects = [
         <SectionHeader
           title={"Experience"}
           eyebrow={"My Professional Journey"}
-          description={"See how I built these awesome projects in real life."}
+          description={""}
         />
 
         <div className="flex flex-col gap-20 mt-10 md:mt-20">
