@@ -14,17 +14,17 @@ const SocialsData = [
   {
     name: "Leetcode",
     icon: LeetcodeIcon,
-    url: "https://leetcode.com/"
+    url: "https://leetcode.com/u/awais_ansarii/"
   },
   {
     name: "Github",
     icon: GithubIcon,
-    url: "https://github.com/"
+    url: "https://github.com/awais-ansarii"
   },
   {
     name: "LinkedIn",
     icon: LinkedinIcon,
-    url: "https://www.linkedin.com/"
+    url: "https://www.linkedin.com/in/awais-ansari-584705270/"
   }
 ];
 export const ContactSection = ({}) => {
