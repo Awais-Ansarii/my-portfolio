@@ -12,7 +12,8 @@ const portfolioProjects = [
     year: "2024 - 2026",
     title: "Software Engineer",
     results: [
-      { title: "Integrated multiple 3rd-party web-hooks and APIs" },
+      { title: "Re-engineered a broken legacy Next.js 12 application into a scalable Next.js 15 architecture using App Router, Server Components, and hybrid ISR + on-demand revalidation — delivering faster load times, 100% performance and SEO scores, improved search indexing with a dynamic sitemap, and a significant increase in organic traffic & ranking visibility." },
+      { title: "Integrated multiple 3rd-party web-hooks and APIs, Razorpay & Stripe payment gateways." },
       { title: "Set up CI/CD pipelines via GitLab Jenkins to automate linting, building and deployment of several applications." },
       { title: "Extended authentication module to support custom 3-factor authentication (3FA) flows by customising existing auth library (better-auth), adding security beyond defaults." },
     ],
