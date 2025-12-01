@@ -12,10 +12,27 @@ const portfolioProjects = [
     year: "2024 - 2026",
     title: "Software Engineer",
     results: [
-      { title: "Re-engineered a broken legacy Next.js 12 application into a scalable Next.js 15 architecture using App Router, Server Components, and hybrid ISR + on-demand revalidation — delivering faster load times, 100% performance and SEO scores, improved search indexing with a dynamic sitemap, and a significant increase in organic traffic & ranking visibility." },
+    
+      { title: "Developed end-to-end web applications, including user-specific platforms and a modern super admin dashboard, while also integrating a dynamic website with Strapi CMS for seamless content management and real-time updates." },
+      
+      
+      
+      
+      
+      
+      { title: "Implemented real-time chat functionality using WebSockets (Socket.io), allowing users to request support, admins to initiate or accept chats, share media, and mark conversations as completed or resolved." },
+      
+      { title: "Built and optimized RESTful APIs with CRUD operations, implemented API security, error handling, and testing, while ensuring efficient query performance and integrating proper logging mechanisms." },
+      
       { title: "Integrated multiple 3rd-party web-hooks and APIs, Razorpay & Stripe payment gateways." },
-      { title: "Set up CI/CD pipelines via GitLab Jenkins to automate linting, building and deployment of several applications." },
+      
       { title: "Extended authentication module to support custom 3-factor authentication (3FA) flows by customising existing auth library (better-auth), adding security beyond defaults." },
+
+      { title: "Set up CI/CD pipelines via GitLab and Jenkins to automate linting, building, deployment, and ensure consistent environment by Dockerizing the application." },
+
+      { title: "Re-engineered a broken legacy Next.js 12 application into a scalable Next.js 15 architecture using App Router, Server Components, and hybrid ISR + on-demand revalidation, SSG — delivering faster load times, 100% performance and SEO scores, improved search indexing with a dynamic sitemap, and a significant increase in organic traffic & ranking visibility." },
+
+      { title: "Translated UX designs into responsive UI with pixel-perfect implementation, enhancing user experience across platforms." },
     ],
   },
   
