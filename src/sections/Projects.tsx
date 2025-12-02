@@ -10,14 +10,14 @@ import SectionHeader from "@/components/SectionHeader";
 import Card from "@/components/Card";
 const portfolioProjects = [
   {
-    company: "Acme Corp",
-    year: "2022",
-    title: "AI-Powered Career Coaching and Achievement Tracking Platform",
+    
+    title: "AI-Powered Career Coaching & Achievement Tracking Platform",
     desc: "AI-powered career coaching platform that helps employees, especially early-career and underrepresented individuals, track achievements and receive personalized guidance. It boosts engagement, fosters confidence, and reduces turnover by making performance management more effective and achievement-focused.",
     results: [
-      { title: "Enhanced user experience by 40%" },
-      { title: "Improved site speed by 50%" },
-      { title: "Increased mobile traffic by 35%" },
+      { title: "Developed end-to-end web applications, including user-specific platform and a modern super admin dashboard, while also integrating a dynamic website with Strapi CMS for seamless content management and real-time updates." },
+      { title: "Translated UX designs into responsive UI with pixel-perfect implementation, enhancing user experience across platforms." },
+      { title: "Integrated 3rd party APIs including Hubspot, Sendgrid, Hotjar, Google Analytics, Cookie-bot etc." },
+      { title: "Implemented scheduled cron jobs to automate daily reminder emails, weekly in-app notifications for achievements, monthly career-coach check-ins, and free trial expiration alerts." },
     ],
     link: "https://youtu.be/4k7IdSLxh6w",
     tech: [
@@ -32,6 +32,9 @@ const portfolioProjects = [
       },
       {
         title: "Tailwind",
+      },
+      {
+        title: "Context Api",
       },
       {
         title: "AWS (S3, Amazon SES)",
@@ -183,7 +186,7 @@ export const ProjectsSection = () => {
                             key={index}
                             className="flex gap-2 text-sm md:text-base text-white/50"
                           >
-                            <CheckCircleIcon className="size-5 md:size-6" />
+                            <CheckCircleIcon className="size-5 md:size-6 shrink-0" />
                             <span>{result.title}</span>
                           </li>
                         );
@@ -197,7 +200,7 @@ export const ProjectsSection = () => {
                       </Link> */}
                     </ul>
                     
-                    <div className="mt-4 flex flex-row items-start justify-start gap-x-2">
+                    <div className="mt-4 md:mt-6 flex flex-row items-start justify-start gap-x-2">
                       <span className="text-sm md:text-base ">Techstack: </span>
                       <div className="flex flex-wrap gap-2">
 
