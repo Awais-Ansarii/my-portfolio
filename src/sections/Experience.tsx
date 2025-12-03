@@ -30,6 +30,8 @@ const portfolioProjects = [
       
       { title: "Extended authentication module to support custom 3-factor authentication (3FA) flows by customising existing auth library (better-auth), adding security beyond defaults." },
 
+      { title: "Designed and implemented a fully dynamic Role-Based Access Control (RBAC) system in Next.js with centralized roles, permissions, and route-permission mapping, enforcing security at both server (middleware) and client (UI) levels. Enabled granular component-level access using a permission context and readable frontend constants for type-safe authorization." },
+
       { title: "Set up CI/CD pipelines via GitLab and Jenkins to automate linting, building, deployment, and ensure consistent environment by Dockerizing the application." },
 
       { title: "Re-engineered a broken legacy Next.js 12 application into a scalable Next.js 15 architecture using App Router, Server Components, and hybrid ISR + on-demand revalidation, SSG — delivering faster load times, 100% performance and SEO scores, improved search indexing with a dynamic sitemap, and a significant increase in organic traffic & ranking visibility." },
@@ -87,7 +89,7 @@ const portfolioProjects = [
 
                     
                     <hr className="mt-4 md:mt-5 border-2 border-white/5" />
-                    <ul className="flex flex-col gap-4 mt-4 md:mt-5 max-md:pb-6">
+                    <ul className="flex flex-col gap-4 mt-4 md:mt-5 max-lg:pb-6">
                       {project?.results?.map((result, index) => {
                         return (
                           <li

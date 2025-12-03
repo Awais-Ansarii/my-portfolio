@@ -144,7 +144,7 @@ const portfolioProjects = [
       },
       {
         title:
-          "Implemented scheduled cron jobs to automate daily reminder emails, weekly in-app notifications for achievements, monthly career-coach check-ins, and free trial expiration alerts.",
+          "Designed and implemented a fully dynamic Role-Based Access Control (RBAC) system in Next.js with centralized roles, permissions, and route-permission mapping, enforcing security at both server (middleware) and client (UI) levels. Enabled granular component-level access using a permission context and readable frontend constants for type-safe authorization.",
       },
       {
         title:
@@ -215,6 +215,10 @@ const portfolioProjects = [
       },
       {
         title:
+          "Implemented a complete subscription and billing system with admin-driven plan management (free & paid) supporting token limits, audio/video usage caps, and multi-gateway support (Stripe & Razorpay). Built secure checkout, payment verification via webhooks, and automated post-payment plan activation.",
+      },
+      {
+        title:
           "Implemented scheduled cron jobs to automate daily reminder emails, generate timely in-app notifications, send free trial expiration alerts, and perform real-time validation of active subscription limits, including token usage against allocated quotas.",
       },
       {
@@ -256,6 +260,9 @@ const portfolioProjects = [
       {
         title: "Web Sockets",
       },
+      {
+        title: "Web Hooks",
+      },
 
       {
         title: "Socket.io",
@@ -286,17 +293,17 @@ export const ProjectsSection = () => {
           description={""}
         />
 
-        <div className="flex flex-col gap-20 mt-10 md:mt-20">
+        <div className="flex flex-col gap-16 mt-10 md:mt-16">
           {portfolioProjects?.map((project, index) => {
             return (
               <Card
                 className={
-                  "px-8 md:px-10 lg:px-12 pt-8 lg:pt-16 md:pt-12 pb-0 sticky top-20"
+                  "px-8 md:px-10 lg:px-12 pt-8  md:pt-12 pb-0 "
                 }
                 key={index}
-                style={{
-                  top: `64px + ${index * 40}px`,
-                }}
+                // style={{
+                //   top: `64px + ${index * 40}px`,
+                // }}
               >
                 <div
                   className="absolute inset-0 -z-10 opacity-5"
@@ -304,7 +311,7 @@ export const ProjectsSection = () => {
                 ></div>
                 <div className="lg:grid lg:grid-cols-1 lg:gap-16">
                   <div className="lg:pb-16">
-                    <h3 className="font-serif md:text-center text-2xl md:text-4xl mt-2 md:mt-5">
+                    <h3 className="font-serif md:text-center text-2xl md:text-4xl mt-2 md:mt-4">
                       {project.title}
                     </h3>
                     {project.desc && (
@@ -339,8 +346,8 @@ export const ProjectsSection = () => {
                       })}
                     </ul>
 
-                    <div className="mt-4 pb-4 md:pb-2 md:mt-6 flex flex-row items-start justify-start gap-x-2">
-                      <span className="text-sm md:text-base text-nowrap">
+                    <div className="mt-4 pb-4 md:pb-4 md:mt-6 flex flex-row items-start justify-start gap-x-2 max-md:flex-wrap">
+                      <span className="text-sm md:text-base text-nowrap max-md:pb-2">
                         Tech Stack:{" "}
                       </span>
                       <div className="flex flex-wrap gap-2">
