@@ -159,11 +159,11 @@ export const HeroSection = ({}) => {
             <span className="font-semibold">Let&apos;s Connect</span>
           </Link> */}
           <Link
-            href={"https://drive.google.com/"}
+            href={"https://drive.google.com/file/d/1_ZZIjcNp-Ku9bZ3E7xKpMHqdXVm4JJj5/view?usp=drive_link"}
             // href={"https://drive.google.com/file/d/1q5etOT4i-bNuGU9Zrqh9OzJfFb8y3olr/view"}
             target="_blank"
             className="inline-flex relative z-[999] hover:bg-emerald-300/10 hover:text-emerald-300 items-center  gap-2 border !cursor-pointer rounded-xl border-white/15 px-6 h-12">
-            <span className="font-semibold">Download Resume</span>
+            <span className="font-semibold">View Resume</span>
             <ArrowDown className="size-4" />
           </Link>
           <Link href={"#contact"} className="group max-md:min-w-[215px] hover:scale-105 inline-flex px-6 h-12 relative z-[999] text-gray-900  items-center gap-2 border cursor-pointer rounded-xl border-white bg-white">
