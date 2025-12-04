@@ -209,10 +209,7 @@ const portfolioProjects = [
         title:
           "Extended authentication module to support custom 3-factor authentication (3FA) flows by customising existing auth library (better-auth), adding security beyond defaults.",
       },
-      {
-        title:
-          "Integrated Razorpay & Stripe Payement Gateways.",
-      },
+      
       {
         title:
           "Implemented a complete subscription and billing system with admin-driven plan management (free & paid) supporting token limits, audio/video usage caps, and multi-gateway support (Stripe & Razorpay). Built secure checkout, payment verification via webhooks, and automated post-payment plan activation.",
