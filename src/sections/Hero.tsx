@@ -159,7 +159,7 @@ export const HeroSection = ({}) => {
             <span className="font-semibold">Let&apos;s Connect</span>
           </Link> */}
           <Link
-            href={"https://drive.google.com/file/d/1_ZZIjcNp-Ku9bZ3E7xKpMHqdXVm4JJj5/view?usp=drive_link"}
+            href={"https://drive.google.com/file/d/1T8EzdOg1KvaIY8MikGPJShD2e_Je3Wvf/view?usp=sharing"}
             // href={"https://drive.google.com/file/d/1q5etOT4i-bNuGU9Zrqh9OzJfFb8y3olr/view"}
             target="_blank"
             className="inline-flex relative z-[999] hover:bg-emerald-300/10 hover:text-emerald-300 items-center  gap-2 border !cursor-pointer rounded-xl border-white/15 px-6 h-12">
