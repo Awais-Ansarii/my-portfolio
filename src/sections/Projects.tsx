@@ -76,7 +76,7 @@ const portfolioProjects = [
     results: [
       {
         title:
-          "Migrated legacy front-end to Next.js 15: Transformed monolithic, outdated codebase into a modern Next.js architecture — improving performance, maintainability, and developer experience.",
+          "Migrated legacy front-end Next.js version 12 to version 15: Transformed monolithic, outdated codebase into a modern Next.js architecture — improving performance, maintainability, and developer experience.",
       },
       {
         title:
