@@ -150,8 +150,7 @@ export const HeroSection = ({}) => {
             Building Scalable Full Stack Applications
           </h1>
           <p className="mt-4 text-center text-pretty text-white/60 md:text-lg">
-            I specialize in building highly scalable, performant, optimize full
-            stack applications using the latest technologies and best practices.
+            Full Stack Software Engineer with 2+ years of experience building scalable, high-performance web applications for a US-based startup. Specialized in Java, React, Next.js, Node.js, and cloud-native architectures with expertise in real-time systems, secure authentication, payments, and performance optimization. Proven ability to modernize legacy systems and deliver SEO-optimized, production-ready solutions.
           </p>
         </div>
         <div className="w-full mx-auto flex flex-col md:flex-row md:justify-center items-center mt-8 gap-4">
