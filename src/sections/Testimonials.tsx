@@ -14,6 +14,13 @@ const testimonials = [
   platformUrl:"https://namastedev.com/",
   description: "A hands-on advanced React training focused on deep internals like Fiber architecture, custom hooks, and performance optimization."
 },
+ {
+  name: "Low-Level Design (LLD) by Keerti Purswani",
+  platform: "Educosys",
+  certificateUrl:"https://generateinvoice.teachx.in/generatecertificate/certificate/keertipurswani_db/16027/25318/8",
+  platformUrl:"https://www.educosys.com",
+  description: "Learnt to design clean, modular, object-oriented systems using UML, design principles, and essential design patterns"
+},
 {
   name: "Full Stack Development with React.js & Node.js Live",
   platform: "GeeksforGeeks",
