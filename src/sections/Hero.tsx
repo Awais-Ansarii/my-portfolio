@@ -162,7 +162,7 @@ export const HeroSection = ({}) => {
             href={"https://drive.google.com/file/d/1T8EzdOg1KvaIY8MikGPJShD2e_Je3Wvf/view?usp=sharing"}
             // href={"https://drive.google.com/file/d/1q5etOT4i-bNuGU9Zrqh9OzJfFb8y3olr/view"}
             target="_blank"
-            className="inline-flex relative z-[999] hover:bg-emerald-300/10 hover:text-emerald-300 items-center  gap-2 border !cursor-pointer rounded-xl border-white/15 px-6 h-12">
+            className="inline-flex relative z-[999] hover:bg-emerald-300/10 hover:text-emerald-300 items-center  gap-2 border !cursor-pointer max-md:min-w-[215px] md:px-10 rounded-xl border-white/15 px-6 h-12 hover:scale-105">
             <span className="font-semibold">View Resume</span>
             {/* <ArrowDown className="size-4" /> */}
           </Link>
